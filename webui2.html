@@ -59,11 +59,11 @@
      </div>
 <script>
 function onv13(){
- var request = new XMLHttpRequest();
+ var requeston = new XMLHttpRequest();
 
-request.open('GET', 'http://blynk-cloud.com/Zwzi8EI7bLIzDvugKvPS1c5ByewfPQXj/update/V13?value=1');
+requeston.open('GET', 'http://blynk-cloud.com/Zwzi8EI7bLIzDvugKvPS1c5ByewfPQXj/update/V13?value=1');
 
-request.onreadystatechange = function () {
+requeston.onreadystatechange = function () {
   if (this.readyState === 4) {
     console.log('Status:', this.status);
     console.log('Headers:', this.getAllResponseHeaders());
@@ -76,11 +76,11 @@ request.send();
 </script>
 <script>
 function offv13(){
- var request = new XMLHttpRequest();
+ var requestof = new XMLHttpRequest();
 
-request.open('GET', 'http://blynk-cloud.com/Zwzi8EI7bLIzDvugKvPS1c5ByewfPQXj/update/V13?value=0');
+requestof.open('GET', 'http://blynk-cloud.com/Zwzi8EI7bLIzDvugKvPS1c5ByewfPQXj/update/V13?value=0');
 
-request.onreadystatechange = function () {
+requestof.onreadystatechange = function () {
   if (this.readyState === 4) {
     console.log('Status:', this.status);
     console.log('Headers:', this.getAllResponseHeaders());
