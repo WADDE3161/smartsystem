@@ -20,33 +20,33 @@
   width: 25%;
   padding: 10px;
   margin-left: 25px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  
 }
 #cl-ls {
   float: left;
   width: 30%;
   padding: 10px;
   margin-left: 25px;
-  height: 300px; /* Should be removed. Only for demonstration */
+ 
 }
 #cl-3 {
   float: left;
   width: 30%;
   padding: 10px;
   margin-left: 25px;
-  height: 300px; /* Should be removed. Only for demonstration */
+ 
 }
 #cl-4 {
   float: left;
   width: 25%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  
 }
 #cl-5 {
   float: left;
   width: 20%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+ 
 }
 #cl-t1 {
   float: left;
@@ -109,21 +109,19 @@ html {
   width: 100%;
   padding: 10px;
   margin-left: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  
 }
 #cl-ls {
   float: left;
   width: 100%;
   padding: 10px;
   margin-left: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
   #cl-3 {
   float: left;
   width: 100%;
   padding: 10px;
   margin-left: 25px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
   #cl-t1 {
   float: left;
