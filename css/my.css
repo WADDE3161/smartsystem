@@ -83,6 +83,13 @@
 html {
   scroll-behavior: smooth;
 }
+  #cl-3 {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  margin-left: 25px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
   #cl-t1 {
   float: left;
   width: 100%;
