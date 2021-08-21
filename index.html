@@ -48,17 +48,18 @@
         width: 100%;
 	border-radius: 15px;
 }
-.datap1 {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
- 
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
   top: 0;
   left: 0;
-  border-radius: 30px;
-  overflow-x: hidden; /* Disable horizontal scroll */
-
-  transition: 0.2s; /* 0.5 second transition effect to slide in the sidenav */
-  
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
  .sidenava {
   height: 100%; /* 100% Full-height */
@@ -372,7 +373,7 @@
 					</div>
 					
 					<div class="col-3 datap1" id="cl-la">
-						<div class="single-widget"id="p1data">
+						<div class="single-widget"id="overlay">
 							<h3>smart home system </h3>
 							<p>device are available in your city</p>
 						</div>
@@ -492,14 +493,12 @@ function dpunecloseNav() {
   document.getElementById("main").style.marginLeft = "0";
 } 
 function p1data1openNav() {
-  document.getElementById("p1data").style.width = "190px";
-  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("overlay").style.display = "block";
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function p1data1closeNav() {
-  document.getElementById("p1data").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 }
 </script>
   
