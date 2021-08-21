@@ -48,19 +48,7 @@
         width: 100%;
 	border-radius: 15px;
 }
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
+
  .sidenava {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
@@ -373,7 +361,7 @@
 					</div>
 					
 					<div class="col-3" id="cl-la">
-						<div class="single-widget"id="overlay">
+						<div class="single-widget">
 							<h3>smart home system </h3>
 							<p>device are available in your city</p>
 						</div>
@@ -489,14 +477,7 @@ function dpunecloseNav() {
   document.getElementById("dpune").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
 } 
-function p1data1openNav() {
-  document.getElementById("overlay").style.display = "block";
-}
 
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
-}
 </script>
   
     <script src="js/jquery.js"></script>
