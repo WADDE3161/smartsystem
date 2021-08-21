@@ -11,6 +11,13 @@
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
+#cl-img {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  
+  height: relative; /* Should be removed. Only for demonstration */
+}
 #cl-3 {
   float: left;
   width: 30%;
@@ -82,6 +89,13 @@
 @media screen and (max-width: 650px) {
 html {
   scroll-behavior: smooth;
+}
+  #cl-img {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  
+  height: relative; /* Should be removed. Only for demonstration */
 }
   #cl-3 {
   float: left;
