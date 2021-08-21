@@ -22,7 +22,13 @@
   margin-left: 25px;
   
 }
-
+#cl-la {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  margin-left: 25px;
+  
+}
 #cl-3 {
   float: left;
   width: 30%;
