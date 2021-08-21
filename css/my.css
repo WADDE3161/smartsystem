@@ -13,10 +13,7 @@
 }
 #cl-img {
   float: left;
-  width: 30%;
-  padding: 10px;
-  
-  height: relative; /* Should be removed. Only for demonstration */
+  width: 30%;  
 }
 #cl-3 {
   float: left;
@@ -91,11 +88,7 @@ html {
   scroll-behavior: smooth;
 }
   #cl-img {
-  float: left;
   width: 100%;
-  padding: 10px;
-  
-  height: relative; /* Should be removed. Only for demonstration */
 }
   #cl-3 {
   float: left;
