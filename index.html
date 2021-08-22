@@ -534,9 +534,7 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
    var str = "Send on WhatsApp";
-  
-   var linc = https://wa.me/919766097689?text="Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude;
-  var result = str.link("linc");
+  var result = str.link("https://wa.me/919766097689?text="Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude");
   document.getElementById("app").innerHTML = result;
 }
 </script>
