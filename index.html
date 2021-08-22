@@ -107,6 +107,26 @@
   border: 2px solid orange;
   border-radius: 25px;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+	 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
   .sidenava {padding-top: 15px;}
@@ -365,10 +385,13 @@
 					<div class="col-3" id="cl-la">
 						<div class="single-widget">
 							<h4 id="d1a">smart home system </h4>
-							<p id="d1b">device are available in your city</p>
-							<p id="d1c"> are available in your city</p>
-							<p id="d1d">available in your city</p>
-							<p id="d1e"> in your city</p>
+							<div class="dropdown">
+                                                                   <span>Mouse over me</span>
+                                                              <div class="dropdown-content">
+                                                               <p>Hello</p>
+							       <p>WADDE DON</p>
+                                                            </div>
+                                                            </div>
 						</div>
 					</div>
 					
