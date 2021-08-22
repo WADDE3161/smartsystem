@@ -84,6 +84,13 @@
 #dropdown a:hover {
 	border: 1px solid green;
 	 }
+#getlatlong {
+	padding:5px;
+	border: 1px solid orange;
+	border-radius: 5px;
+	margin: 3px;
+        float: left;
+	 }
 #dropdown-content {
   display: none;
   position: absolute;
@@ -233,7 +240,12 @@
              <a href="images/home/store.html"><img src="man.png" ></a>
               
             </div>
-	</div>						
+	</div>	
+        <p id="latlong"></p>	
+	<button id="getlatlong" onclick="getLocation()">Your location</button>
+
+      
+		
     </div>
   <div class="dropdown"id="dropdown">
     <span>ALL DEVICES</span>
@@ -506,7 +518,22 @@ function dpunecloseNav() {
 } 
 }
 </script>
-  
+  <script>
+var x = document.getElementById("latlong");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
