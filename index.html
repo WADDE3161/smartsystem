@@ -85,12 +85,16 @@
 	border: 1px solid green;
 	 }
 #getlatlong {
-	padding:5px;
+	padding:7px;
 	border: 1px solid orange;
 	border-radius: 5px;
 	margin: 3px;
         float: left;
 	 }
+#getlatlong:hover {
+       border: 2px solid green;
+       padding:5px
+}
 #dropdown-content {
   display: none;
   position: absolute;
@@ -526,7 +530,7 @@ function copyToClipboard(element) {
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
-   alert("Copied location");
+   
 }	  
 	  
 	  
