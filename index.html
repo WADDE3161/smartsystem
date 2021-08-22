@@ -242,9 +242,9 @@
             </div>
 	</div>	
         <p id="latlong"></p>	
-	<p id="app"></p>
+	
 	<button id="getlatlong" onclick="getLocation()">Your location</button>
-        <a id="getlatlong" href="https://wa.me/919766097689?text=lat long">WhatsApp</a>
+        <a id="getlatlong" href="https://wa.me/919766097689?text=Your Name :                City :                   Paste lat long :                            ">WhatsApp</a>
       
 		
     </div>
@@ -531,10 +531,9 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = position.coords.latitude +" " position.coords.longitude;
-   var str = "Send on WhatsApp";
-  var result = str.link("https://wa.me/919766097689?text=long press here and Click Paste");
-  document.getElementById("app").innerHTML = result;
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+ 
 }
 </script>
     <script src="js/jquery.js"></script>
