@@ -116,9 +116,9 @@ var Delhi = ["Central Delhi","East Delhi","New Delhi","North Delhi","North East 
 var Lakshadweep = ["Lakshadweep"];
 var Puducherry = ["Karaikal","Mahe","Puducherry","Yanam"];
 
- var state = document.getElementById("inputState");
-     state.change(function(){
-  var StateSelected = $(this).val();
+
+     document.getElementById("inputState").change(function(){
+  var StateSelected = document.getElementById(this).val();
   var optionsList;
   var htmlString = "";
 
