@@ -120,7 +120,7 @@ var Puducherry = ["Karaikal","Mahe","Puducherry","Yanam"];
      document.getElementById("inputState").change(function(){
   var StateSelected = document.getElementById(this).val();
   var optionsList;
-  var htmlString = "";
+
 
   switch (StateSelected) {
     case "Andra Pradesh":
@@ -235,9 +235,9 @@ var Puducherry = ["Karaikal","Mahe","Puducherry","Yanam"];
 
 
   for(var i = 0; i < optionsList.length; i++){
-    htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+   document.getElementById("inputDistrict").html("<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>");
   }
-  document.getElementById("inputDistrict").html(htmlString);
+  
 
 });
 </script>
