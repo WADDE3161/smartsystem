@@ -347,7 +347,7 @@
 		</div>
 	</section><!--/slider-->
 	<section>
-<iframe src="test.html"></iframe>
+<div inhtm="test.html"></div>
 <h2 class="title text-center">Products</h2>
 <input type="file" accept="image/*" capture="camera" />
 		<div class="carda">
@@ -553,12 +553,45 @@ function showPosition(position) {
  
 }
 </script>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    
+    file = elmnt.getAttribute("inhtm");
+    if (file) {
+      
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          
+          elmnt.removeAttribute("inhtm");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      
+      return;
+    }
+  }
+}
+</script>
+<script>
+includeHTML();
+</script>
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>
 		
