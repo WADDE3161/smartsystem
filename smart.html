@@ -35,17 +35,13 @@
 
 <div id="id01" class="w3-modal" style="border-radius:6px;">
  <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-  <header class="w3-container w3-blue" style="border-radius:6px;"> 
+  <header class="w3-container " style="border-radius:6px;"> 
    <span style="border-radius:6px;" onclick="document.getElementById('id01').style.display='none'" 
-   class="w3-button w3-blue w3-xlarge w3-display-topright" style="border-radius:6px;">&times;</span>
+   class="w3-button w3-xlarge w3-display-topright" style="border-radius:6px;">&times;</span>
    <h2>Header</h2>
   </header>
 
-  <div class="w3-bar w3-border-bottom"style="border-radius:6px;">
-   <button style="border-radius:6px;" class="tablink w3-bar-item w3-button" onclick="openCity(event, 'London')">London</button>
-   <button style="border-radius:6px;" class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Paris')">Paris</button>
-   <button style="border-radius:6px;" class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  </div>
+
 
   <div id="London" style="border-radius:6px;" class="w3-container city">
    <h1>London</h1>
@@ -63,8 +59,14 @@
    <h1>Tokyo</h1>
    <p>Tokyo is the capital of Japan.</p><br>
   </div>
-
-  <div class="w3-container w3-light-grey w3-padding" style="border-radius:6px;" >
+  
+   <div class="w3-bar w3-border-top"style="border-radius:6px;">
+   <button style="border-radius:8px;" class="tablink w3-bar-item w3-button" onclick="openCity(event, 'London')">London</button>
+   <button style="border-radius:8px;" class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Paris')">Paris</button>
+   <button style="border-radius:8px;" class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  </div>
+  
+  <div class="w3-container w3-light-grey w3-padding" style="border-radius:10px;" >
    <button style="border-radius:6px;" class="w3-button w3-right w3-white w3-border" 
    onclick="document.getElementById('id01').style.display='none'">Close</button>
   </div>
