@@ -8,14 +8,7 @@
 </style>
 <body>
   
-<div class="w3-container">
-<img class="mySlides" src="images/cb.png">
-<img class="mySlides" src="images/paytm.png">
-<img class="mySlides" src="images/logo.png">
-<img class="mySlides" src="images/insta.png">
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
- </div>
+
   
 <div class="w3-container">
   <h2>W3.CSS Modal Image Gallery</h2>
@@ -104,25 +97,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.classList.add("w3-light-grey");
 }
 </script>
- <script> 
-var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-   </script>
 <script>
 function onClick(element) {
   document.getElementById("img01").src = element.src;
