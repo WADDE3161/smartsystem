@@ -1,589 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>SMART HOME SYSTEM</title>
-	 <link href="css/w3.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-      <link href="rgb.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->  
-	<script src="js/html5shiv.js"></script>
-	<script src="my.js"></script>
-	<script src="js/w3.js"></script>
-    <script src="js/respond.min.js"></script>
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
- <style>
-	 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+    <link href="css/main.css" rel="stylesheet">
+    <link href="rgb.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-#pimg {
-    
-    width: 400px;
-    
-   
-    overflow: hidden;
-}
-#pimg img {
-        width: 100%;
-	border-radius: 15px;
-}
-
+    <script src="my.js"></script>
+    <script src="js/w3.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="shortcut icon" href="images/logos.png">
  
-.columna {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-  
-}
-	 .carda {
-  box-shadow: 2px 2px 5px black;
-  border: 2px solid orange;
-  border-radius: 25px;
-}
-
-#dropdown {
-	padding:7px;
-	border: 1px solid orange;
-	width: 80%;
-	border-radius: 5px;
-	margin-bottom: 6px;
-  position: relative;
-
-}
-#dropdown a {
-	padding:7px;
-	border: 1px solid orange;
-	border-radius: 5px;
-	margin: 6px;
-        float: left;
-       
-
-}
-#dropdown a:hover {
-	border: 1px solid green;
-	 }
-
-#dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-#dropdown:hover #dropdown-content {
-	
-	display: block;
-	 }
-#getlatlong {
-	padding:7px;
-	border: 1px solid orange;
-	border-radius: 5px;
-	margin: 3px;
-        float: left;
-	 }
-#getlatlong:hover {
-       border: 2px solid green;
-       padding:5px
-}
-	 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-width: 450px) {
-  .sidenava {padding-top: 15px;}
-  .sidenava a {font-size: 18px;animation-name: fadeInRight; }
-	.sidenava a:hover {animation-name: fadeOutRight; }
-.columna {
-  float: left;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 0 8px;
-  
-	}	 
-	 
-	 }
-
-/* Some left and right padding inside the container */
-.containera {
-  padding: 0 16px;
-}
-
-/* Clear floats */
-.containera::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.imgbtn img {
-  width:62px;
-  height:62px;
-  border-radius: 50%; 
-  padding:4px; 
-  background-color: #668cff;
- }
-.imgbtn:hover img {
-  width:72px;
-  height:72px;
-  background-color: #1aff1a;
-}
-.imgbtn1 img {
-  width:62px;
-  height:62px;
-  border-radius: 50%; 
-  padding:4px; 
-  background-color: #1ad1ff;
-  animation-name: fadeIn; 
-  animation-duration: 5s;
- }
-.imgbtn1:hover img {
-  width:72px;
-  height:72px;
-  background-color: #00ffaa;
-  animation-name: fadeOut; 
-  animation-duration: 2s;
-}
-.imgbtn2 img {
-  width:62px;
-  height:62px;
-  border-radius: 50%; 
-  padding:4px; 
-  background-color: #3333ff;
-  animation-name: fadeOutUp; 
-  animation-duration: 2s;
- }
-.imgbtn2:hover img {
-  width:72px;
-  height:72px;
-  background-color: #ffff1a;
-  animation-name: fadeOutUp; 
-  animation-duration: 2s;
-}
-.lang {
- background-color: orange;
- border-radius: 15px;
-}
-</style>
-</head><!--/head-->
+    <style>
+        html {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        
+        #pimg {
+            width: 400px;
+            overflow: hidden;
+        }
+        
+        #pimg img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        .columna {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+        
+        .carda {
+            box-shadow: 2px 2px 5px black;
+            border: 2px solid orange;
+            border-radius: 25px;
+        }
+        
+        #dropdown {
+            padding: 7px;
+            border: 1px solid orange;
+            width: 80%;
+            border-radius: 5px;
+            margin-bottom: 6px;
+            position: relative;
+        }
+        
+        #dropdown a {
+            padding: 7px;
+            border: 1px solid orange;
+            border-radius: 5px;
+            margin: 6px;
+            float: left;
+        }
+        
+        #dropdown a:hover {
+            border: 1px solid green;
+        }
+        
+        #dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        
+        #dropdown:hover #dropdown-content {
+            display: block;
+        }
+        
+        #getlatlong {
+            padding: 7px;
+            border: 1px solid orange;
+            border-radius: 5px;
+            margin: 3px;
+            float: left;
+        }
+        
+        #getlatlong:hover {
+            border: 2px solid green;
+            padding: 5px
+        }
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        
+        @media screen and (max-width: 450px) {
+            .sidenava {
+                padding-top: 15px;
+            }
+            .sidenava a {
+                font-size: 18px;
+                animation-name: fadeInRight;
+            }
+            .sidenava a:hover {
+                animation-name: fadeOutRight;
+            }
+            .columna {
+                float: left;
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 0 8px;
+            }
+        }
+        /* Some left and right padding inside the container */
+        
+        .containera {
+            padding: 0 16px;
+        }
+        /* Clear floats */
+        
+        .containera::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .imgbtn img {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            padding: 4px;
+            background-color: #668cff;
+        }
+        
+        .imgbtn:hover img {
+            width: 72px;
+            height: 72px;
+            background-color: #1aff1a;
+        }
+        
+        .imgbtn1 img {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            padding: 4px;
+            background-color: #1ad1ff;
+            animation-name: fadeIn;
+            animation-duration: 5s;
+        }
+        
+        .imgbtn1:hover img {
+            width: 72px;
+            height: 72px;
+            background-color: #00ffaa;
+            animation-name: fadeOut;
+            animation-duration: 2s;
+        }
+        
+        .imgbtn2 img {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            padding: 4px;
+            background-color: #3333ff;
+            animation-name: fadeOutUp;
+            animation-duration: 2s;
+        }
+        
+        .imgbtn2:hover img {
+            width: 72px;
+            height: 72px;
+            background-color: #ffff1a;
+            animation-name: fadeOutUp;
+            animation-duration: 2s;
+        }
+        
+        .lang {
+            background-color: orange;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<!--/head-->
 
 <body>
-                                                                 
 
-	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
-				<div class="row" >
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								   <div id="cl-t1">
-                                                                        <a><img onclick="openNav()" style="height: 55px; width:55px;  animation-name: zoomInUp; animation-duration: 3s;" src="images/logoround.png" /></a>
-									</div>
-                                                                   <div id="cl-t2">
-							                 <h4 style="text-shadow: 2px 2px 4px #000000;color:orange; animation-name: fadeInUpBig; animation-duration: 2s; ">Automation is future</h4>
-						                        
-								</div>
-								
-								
-								
-								
-                                                                    
-								
-							</ul>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-                  
-		</div><!--/header_top-->
-		
-		      
 
-	<div class="header-middle"><!--header-middle-->
-	<div class="container">
-	<div class="row">
-	<div class="col-sm-4">
-	<div id="main">
-	   <div id="wind1" class="imgbtn1">
-              <a onclick="openNav()" ><img src="images/home/shop.png">
-               </a>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <div id="cl-t1">
+                                    <a><img onclick="openNav()" style="height: 55px; width:55px;  animation-name: zoomInUp; animation-duration: 3s;" src="images/logoround.png" /></a>
+                                </div>
+                                <div id="cl-t2">
+                                    <h4 style="text-shadow: 2px 2px 4px #000000;color:orange; animation-name: fadeInUpBig; animation-duration: 2s; ">Automation is future</h4>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div id="wind2" class="imgbtn1">
-              <a href="us.html"><img src="images/home/us.png" >
-              </a>
+
+        </div>
+        <!--/header_top-->
+
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div id="main">
+                            <div id="wind1" class="imgbtn1">
+                                <a onclick="openNav()"><img src="images/home/shop.png">
+                                </a>
+                            </div>
+                            <div id="wind2" class="imgbtn1">
+                                <a href="us.html"><img src="images/home/us.png">
+                                </a>
+                            </div>
+                            <div id="wind3" class="imgbtn1">
+                                <a href="subdist.html"><img src="man.png"></a>
+
+                            </div>
+                        </div>
+                        <p id="latlong"></p>
+                        <button id="getlatlong" onclick="getLocation()">Your Location</button>
+                        <button id="getlatlong" onclick="copyToClipboard('#latlong')">Copy</button>
+                        <a id="getlatlong" href="https://wa.me/919766097689?text=Your Name :                City :                   Paste lat long :                            ">WhatsApp</a>
+
+
+                    </div>
+                    <div class="dropdown" id="dropdown">
+                        <span>ALL DEVICES</span>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="https://wa.link/7pyt5i?text=i am intrested">REMOTE CONTROL</a>
+                            <a href="webui.html">REMOTE + WEB UI </a>
+                            <a href="webui1.html">REMOTE + WEB UI 1 </a>
+                            <a href="webui2.html">REMOTE + WEB UI 2 </a>
+                            <a href="#dropdown">ONLINE CANTROL</a>
+                            <a href="drg.html">REMOTE + ONLINE</a>
+                            <a href="#">ROOM TEMPERATURE CANTROL</a>
+                            <a href="#">TEMPERATURE CANTROLD WATER HEATER</a>
+                            <a href="RGB/index.htm">RGB LIGHTING</a>
+                            <a href="https://wa.me/919766097689?text=lat long">AUTOMATIC WATER TANK</a>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
             </div>
-            <div id="wind3" class="imgbtn1" >
-             <a href="subdist.html"><img src="man.png" ></a>
-              
+        </div>
+        <!--/header-middle-->
+
+
+
+    </header>
+    <!--/header-->
+
+    <div class="column" id="google_translate_element" style=" padding-left: 20px;"></div>
+    <section id="slider">
+        <!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel" style="align-items: center;">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6" style="padding-bottom: 20px;">
+                                    <h1><span>SMART </span>HOME SYSTEM</h1>
+                                    <h2>Do sumthing differant</h2>
+                                    <p>Home automation technology. </p>
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="cb.png" class="girl img-responsive" alt="" style="padding-top: 20px;" />
+                                    <img src="#.png" class="pricing" alt="" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6" style="padding-bottom: 20px;">
+                                    <h1><span>SMART </span>HOME SYSTEM</h1>
+                                    <h2>Office devlapment</h2>
+                                    <p>pune</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="sflash">
+                                        <figure><img style="padding-top: 20px;" src="cf.png" class="girl img-responsive" alt="" /></figure>
+                                        <img src="#.png" class="pricing" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="col-sm-6" style="padding-bottom: 20px;">
+                                    <h1><span>SMART </span>HOME SYSTEM</h1>
+                                    <h2>AUTOMETION</h2>
+                                    <p>REMOTE CANTROL </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img style="padding-top: 20px;" src="cb.png" class="girl img-responsive" alt="" />
+                                    <img src="#.png" class="pricing" alt="" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                </div>
             </div>
-	</div>	
-	<p id="latlong"></p>
-	<button id="getlatlong" onclick="getLocation()">Your Location</button>
-	<button id="getlatlong" onclick="copyToClipboard('#latlong')">Copy</button>
-        <a id="getlatlong" href="https://wa.me/919766097689?text=Your Name :                City :                   Paste lat long :                            ">WhatsApp</a>
-      
-		
-    </div>
-  <div class="dropdown"id="dropdown">
-    <span>ALL DEVICES</span>
-  <div class="dropdown-content"id="dropdown-content">
-  <a href="https://wa.link/7pyt5i?text=i am intrested">REMOTE CONTROL</a>
-  <a href="webui.html">REMOTE + WEB UI </a>
-  <a href="webui1.html">REMOTE + WEB UI 1 </a>	  
-  <a href="webui2.html">REMOTE + WEB UI 2 </a>	  
-  <a href="#dropdown">ONLINE CANTROL</a>
-  <a href="drg.html">REMOTE + ONLINE</a>
-  <a href="#">ROOM TEMPERATURE CANTROL</a>
-  <a href="#">TEMPERATURE CANTROLD WATER HEATER</a>
-  <a href="RGB/index.htm">RGB LIGHTING</a>
-  <a href="https://wa.me/919766097689?text=lat long">AUTOMATIC WATER TANK</a>
- 
-</div>
-</div>
-		
-		
-		
-		
-		
-		</div>						
-    </div>
-		</div><!--/header-middle-->
-	         
-	
-			
-	</header><!--/header-->
-	
-  <div class="column" id="google_translate_element" style=" padding-left: 20px;"></div>
-	<section id="slider"><!--slider-->
-			<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel" style="align-items: center;">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-						
-						<div class="carousel-inner" >
-							<div class="item active">
-								<div class="col-sm-6" style="padding-bottom: 20px;">
-									<h1><span>SMART </span>HOME SYSTEM</h1>
-									<h2>Do sumthing differant</h2>
-									<p>Home automation technology. </p>
-									
-								</div>
-								<div class="col-sm-6">
-									<img src="cb.png" class="girl img-responsive" alt="" style="padding-top: 20px;"  />
-									<img src="#.png"  class="pricing" alt="" />
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6" style="padding-bottom: 20px;">
-									<h1><span>SMART </span>HOME SYSTEM</h1>
-									<h2>Office devlapment</h2>
-									<p>pune</p>
-								</div>
-								<div class="col-sm-6">
-                                                                    <div class="sflash">                          
-									<figure><img style="padding-top: 20px;" src="cf.png" class="girl img-responsive" alt="" /></figure>
-									<img src="#.png"  class="pricing" alt="" />
-                                                                    </div>
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-6" style="padding-bottom: 20px;" >
-									<h1><span>SMART </span>HOME SYSTEM</h1>
-									<h2>AUTOMETION</h2>
-									<p>REMOTE CANTROL </p>
-								</div>
-								<div class="col-sm-6">
-									<img style="padding-top: 20px;" src="cb.png" class="girl img-responsive" alt="" />
-									<img src="#.png" class="pricing" alt="" />
-								</div>
-							</div>
-							
-						</div>
-						
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</section><!--/slider-->
-	<section>
+        </div>
+    </section>
+    <!--/slider-->
+    <section>
 
-<h2 class="title text-center">Products</h2>
+        <h2 class="title text-center">Products</h2>
 
-		<div class="carda">
- 	<div class="container">
-				<div class="row">
-					
-				<div class="col-sm-6" id="cl-img">
-						<div class="single-widget">
-							
-							<img src="cb.png" style=" border-radius: 20px; display:block;height:auto;max-width:100%;margin-left: 0;" alt="" />
-						</div>
-					</div>
-				<div class="col-sm-6" id="cl-ce">
-					     <h4>temperature control system</h4>
-						<div class="single-widget">
-							<div class="dropdown"id="dropdown">
-                                                             <span>how</span>
-                                                              <div class="dropdown-content"id="dropdown-content">
-                                                               <a>Hell</a>
-							       <p>WADE DON</p>
-                                                              </div>
-                                                           </div>
-                                                        <div class="single-widget">
-							
-							
-							<div class="dropdown"id="dropdown">
-                                                             <span> works</span>
-                                                              <div class="dropdown-content"id="dropdown-content">
-                                                               <a>Hlo</a>
-							       <p>WAE DON</p>
-                                                              </div>
-                                                           </div>
-                                                        <div class="single-widget">
-							
-							
-							<div class="dropdown"id="dropdown">
-                                                             <span>how it works</span>
-                                                              <div class="dropdown-content"id="dropdown-content">
-                                                               <a>Hel</a>
-							       <p>W DON</p>
-                                                              </div>
-                                                           </div>
-                                                        <div class="single-widget">
-							
-							
-							<div class="dropdown"id="dropdown">
-                                                             <span>how it works</span>
-                                                              <div class="dropdown-content"id="dropdown-content">
-                                                               <a>llo</a>
-							       <p>WE DON</p>
-                                                              </div>
-                                                           </div>
-                                                        
-                                                 
-							
-						</div>
-					</div>
-					
-					
-					
-						
-				
-					
-				</div>
-			</div>
-                       </div>
-	</section>
+        <div class="carda">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6" id="cl-img">
+                        <div class="single-widget">
+
+                            <img src="cb.png" style=" border-radius: 20px; display:block;height:auto;max-width:100%;margin-left: 0;" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6" id="cl-ce">
+                        <h4>temperature control system</h4>
+                        <div class="single-widget">
+                            <div class="dropdown" id="dropdown">
+                                <span>how</span>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a>Hell</a>
+                                    <p>WADE DON</p>
+                                </div>
+                            </div>
 
 
-	
-	<footer id="footer"><!--Footer-->
 
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="companyinfo">
-							<h2><span>SMART </span>HOME SYSTEM</h2>
-							<p>Smart Devices</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-3" id="cl-3">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-3" id="cl-3">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">smart switch</a></li>
-								<li><a href="#">smart fan</a></li>
-								<li><a href="#">remote cantrol</a></li>
-								<li><a href="#">motion cantrol</a></li>
-								<li><a href="#">temp cantrol</a></li>
-							</ul>
-						</div>
-					</div>
-					
-					<div class="col-3" id="cl-3">
-						<div class="single-widget">
-							<h2>smart home system</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
-								<li><a href="#">Copyright</a></li>
-							</ul>
-						</div>
-					</div>
-					
-					
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2021 SMART HOME SYSTEM All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="https://smarthomesystem.in/">sangmeshwar wadde</a></span></p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'hi'}, 'google_translate_element');
-}
-</script>	
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
+                            <div class="dropdown" id="dropdown">
+                                <span> works</span>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a>Hlo</a>
+                                    <p>WAE DON</p>
+                                </div>
+                            </div>
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
-function dpuneopenNav() {
-  document.getElementById("dpune").style.width = "190px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function dpunecloseNav() {
-  document.getElementById("dpune").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
+                            <div class="dropdown" id="dropdown">
+                                <span>how it works</span>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a>Hel</a>
+                                    <p>W DON</p>
+                                </div>
+                            </div>
 
-</script>
-  <script>
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-   
-}	  
-	  
-	  
-	  
-var x = document.getElementById("latlong");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
- 
-}
-</script>
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    
-    file = elmnt.getAttribute("inhtm");
-    if (file) {
-      
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          
-          elmnt.removeAttribute("inhtm");
-          includeHTML();
+                            <div class="dropdown" id="dropdown">
+                                <span>how it works</span>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <a>llo</a>
+                                    <p>WE DON</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer id="footer">
+        <!--Footer-->
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="companyinfo">
+                            <h2><span>SMART </span>HOME SYSTEM</h2>
+                            <p>Smart Devices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3" id="cl-3">
+                        <div class="single-widget">
+                            <h2>Service</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Online Help</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Order Status</a></li>
+                                <li><a href="#">Change Location</a></li>
+                                <li><a href="#">FAQ’s</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3" id="cl-3">
+                        <div class="single-widget">
+                            <h2>Quock Shop</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">smart switch</a></li>
+                                <li><a href="#">smart fan</a></li>
+                                <li><a href="#">remote cantrol</a></li>
+                                <li><a href="#">motion cantrol</a></li>
+                                <li><a href="#">temp cantrol</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-3" id="cl-3">
+                        <div class="single-widget">
+                            <h2>smart home system</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Company Information</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Store Location</a></li>
+                                <li><a href="#">Affillate Program</a></li>
+                                <li><a href="#">Copyright</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2021 SMART HOME SYSTEM All rights reserved.</p>
+                    <p class="pull-right">Designed by <span><a target="_blank" href="https://smarthomesystem.in/">sangmeshwar wadde</a></span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--/Footer-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'hi'
+            }, 'google_translate_element');
         }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      
-      return;
-    }
-  }
-}
-</script>
-<script>
-includeHTML();
-</script>
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        function dpuneopenNav() {
+            document.getElementById("dpune").style.width = "190px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function dpunecloseNav() {
+            document.getElementById("dpune").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+
+        }
+
+
+
+        var x = document.getElementById("latlong");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+
+        }
+    </script>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+
+                file = elmnt.getAttribute("inhtm");
+                if (file) {
+
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+
+                            elmnt.removeAttribute("inhtm");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
     <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
-		
