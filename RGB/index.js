@@ -180,15 +180,7 @@ function loadBg(iUrl) {
 }
 
 function onLoad() {
-	if (window.location.protocol == "file:") {
-	loc = true;
-	locip = localStorage.getItem('locIp');
-	if (!locip)
-	{
-		locip = prompt("File Mode. Please enter WLED IP!");
-		localStorage.setItem('locIp', locip);
-	}
-	}
+	
 	var sett = localStorage.getItem('wledUiCfg');
 	if (sett) cfg = mergeDeep(cfg, JSON.parse(sett));
 
@@ -252,7 +244,7 @@ function showToast(text, error = false) {
 }
 
 function showErrorToast() {
-	showToast('Connection to light failed!', true);
+	
 }
 function clearErrorToast() {
 	d.getElementById("toast").className = d.getElementById("toast").className.replace("error", "");
@@ -358,35 +350,9 @@ function presetError(empty)
 	if (hasBackup) d.getElementById('bck').value = bckstr;
 }
 
-function loadPresets()
-{
-	var url = '/presets.json';
-	if (loc) {
-		url = `http://${locip}/presets.json`;
-	}
+function loadPresets(){}
 
-	fetch
-	(url, {
-		method: 'get'
-	})
-	.then(res => {
-		if (!res.ok) {
-			 showErrorToast();
-		}
-		return res.json();
-	})
-	.then(json => {
-		pJson = json;
-		populatePresets();
-	})
-	.catch(function (error) {
-		showToast(error, true);
-		console.log(error);
-		presetError(false);
-	});
-}
-
-var pQL = [];
+	
 
 function populateQL()
 {
@@ -451,7 +417,7 @@ function populatePresets(fromls)
       let i = is[a];
       if (expanded[i+100]) expand(i+100, true);
     }
-	} else { presetError(true); }
+	} 
 	updatePA();
 	populateQL();
 }
@@ -783,8 +749,7 @@ function loadNodes()
 		populateNodes(lastinfo, json);
 	})
 	.catch(function (error) {
-		showToast(error, true);
-		console.log(error);
+		
 	});
 }
 
@@ -904,7 +869,7 @@ function requestJson(command, rinfo = true, verbose = true) {
 	d.getElementById('connind').style.backgroundColor = "#a90";
   if (command && !reqsLegal) return; //stop post requests from chrome onchange event on page restore
 	lastUpdate = new Date();
-	if (!jsonTimeout) jsonTimeout = setTimeout(showErrorToast, 3000);
+	
 	var req = null;
 	var e1 = d.getElementById('fxlist');
 	var e2 = d.getElementById('selectPalette');
@@ -932,14 +897,14 @@ function requestJson(command, rinfo = true, verbose = true) {
 	})
 	.then(res => {
 		if (!res.ok) {
-			showErrorToast();
+			
 		}
 		return res.json();
 	})
 	.then(json => {
 		clearTimeout(jsonTimeout);
 		jsonTimeout = null;
-		clearErrorToast();
+		
 		d.getElementById('connind').style.backgroundColor = "#070";
 		if (!json) {
 			showToast('Empty response', true);
@@ -1067,29 +1032,11 @@ function requestJson(command, rinfo = true, verbose = true) {
 			});
 		}
 
-		if (s.error && s.error != 0) {
-      		var errstr = "";
-      		switch (s.error) {
-				case 10:
-					errstr = "Could not mount filesystem!";
-					break;
-				case 11:
-					errstr = "Not enough space to save preset!";
-					break;
-				case 12:
-					errstr = "The requested preset does not exist.";
-					break;
-				case 19:
-					errstr = "A filesystem error has occured.";
-					break;
-      		}
-      		showToast('Error ' + s.error + ": " + errstr, true);
-    	}
+		
 		updateUI();
 	})
 	.catch(function (error) {
-		showToast(error, true);
-		console.log(error);
+		
 	});
 }
 
@@ -1617,7 +1564,7 @@ function getPalettesData(page, callback)
 	})
 	.then(res => {
 		if (!res.ok) {
-			showErrorToast();
+			
 		}
 		return res.json();
 	})
@@ -1630,9 +1577,9 @@ function getPalettesData(page, callback)
 		}
 	})
 	.catch(function (error) {
-		showToast(error, true);
+		
 		console.log(error);
-		presetError(false);
+		
 	});
 }
 
