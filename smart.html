@@ -7,6 +7,9 @@
 .city {display:none}
    .nevbtn {border-radius:12px; border: 4px solid orange;margin: 5px; padding:20px}
    .nevbtn:hover { border: 4px solid green;}
+    .homebtn {border-radius:12px; border: 4px solid orange;margin: 5px; padding:15px;float:left}
+   .homebtn:hover { border: 4px solid green;}
+
 </style>
 <body>
   
@@ -77,6 +80,10 @@
  </div>
 <div class="w3-col s2" style="border-radius:6px;">
 <h3>Home</h3>
+<button  class="tablink nevbtn homebtn" onclick="openCity(event, 'London')">London</button>
+ <button  class="tablink nevbtn homebtn" onclick="openCity(event, 'Paris')">Paris</button>
+ <button  class="tablink nevbtn homebtn" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+
  </div>
 </div>
 
