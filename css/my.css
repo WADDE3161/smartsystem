@@ -27,13 +27,19 @@
         }
         
         .carda {
+            
             box-shadow: 2px 2px 5px black;
             border: 2px solid orange;
             border-radius: 25px;
-            margin-bottom: 16px;
-             
+            margin: 10px;
+            padding: 8px;
         }
-        
+         .cardb {
+            float: left;
+            width: 50%;
+             margin: 5px;
+            padding: 4px;
+           }
         #dropdown {
             padding: 7px;
             border: 1px solid orange;
@@ -264,6 +270,12 @@
   border-radius: 50%;
 }
 @media screen and (max-width: 650px) {
+.cardb {
+            float: left;
+            width: 100%;
+
+           }
+
 html {
   scroll-behavior: smooth;
 }
