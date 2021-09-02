@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>smart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="css/w3.css" rel="stylesheet">
+  <style>
+.city {display:none}
+   .nevbtn {border-radius:12px; border: 4px solid orange;margin: 5px; padding:13px}
+   .nevbtn:hover { border: 4px solid green;}
+    .homebtn {border-radius:50%; border: 5px solid orange;margin: 5px; padding:2px;float:left;}
+   .homebtn:hover { border: 5px solid green;}
+
+</style>
+<body>
+  <div class="w3-container w3-col s4">
+    <img src="images/cb.png" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-col s4">
+    <img src="images/cb.png" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-col s4">
+    <img src="images/cb.png" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+
+<div class="w3-row-padding">
+  <div class="w3-container w3-col s4">
+    <img src="images/cb.png" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-col s4">
+    <img src="images/cb.png" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-col s4">
+    <img src="images/cb.png" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+</div>
+
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+  
+  <div class="w3-container">
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:100%;" class="w3-button nevbtn">Open Window</button>
+
+<div id="id01" class="w3-modal" style="border-radius:6px;">
+ <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+
+<div class="w3-col s12" style=" border-radius:6px;">
+  <header class="w3-container" style="border-radius:6px;background: linear-gradient(30deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);"> 
+   <span style="border-radius:6px;" onclick="document.getElementById('id01').style.display='none'" 
+   class="w3-button w3-xlarge w3-display-topright" style="border-radius:6px;">&times;</span>
+   <h2>Smart Home System</h2>
+  </header>
+
+  <div class="w3-col s10"style="background-color:transparent ">
+
+  <div id="London" style="border-radius:6px;" class="w3-container city">
+   <h1>Get our devices</h1>
+   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf81_b_lxlCWGvbwMMGdLxJi0qHowZTLya8Ph4LwJWILlH5TQ/viewform?embedded=true" width="450" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+ </div>
+
+  <div id="Paris" style="border-radius:6px;" class="w3-container city">
+   <h1>Paris</h1>
+   <p>Paris is the capital of France.</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div id="Tokyo" style="border-radius:6px;" class="w3-container city">
+   <h1>Tokyo</h1>
+   <p>Tokyo is the capital of Japan.</p><br>
+  </div>
+  
+  <div id="India" style="border-radius:6px;" class="w3-container city">
+   <h1>Tokyo</h1>
+   <p> is the capital of India.</p><br>
+  </div>
+
+   <div class="w3-bar "style="border-radius:6px;">
+   <button  class="tablink nevbtn w3-bar-item" onclick="openCity(event, 'London')">London</button>
+   <button  class="tablink nevbtn w3-bar-item" onclick="openCity(event, 'Paris')">Paris</button>
+   <button  class="tablink nevbtn w3-bar-item" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button  class="tablink nevbtn w3-bar-item" onclick="openCity(event, 'India')">Tokyo</button>
+  
+  </div>
+  </div>
+<div class="w3-col s2">
+<button  class="tablink  homebtn" onclick="openCity(event, 'London')"><img style="border-radius:50%;hight:45px; width:45px" src="svg/info.svg"></img></button>
+ <button  class="tablink  homebtn" onclick="openCity(event, 'Paris')"><img style="border-radius:50%;hight:45px; width:45px" src="svg/info.svg"></img></button>
+ <button  class="tablink  homebtn" onclick="openCity(event, 'Tokyo')"><img style="border-radius:50%;hight:45px; width:45px" src="svg/info.svg"></img></button>
+ <button  class="tablink  homebtn" onclick="openCity(event, 'India')"><img style="border-radius:50%;hight:45px; width:45px" src="svg/info.svg"></img></button>
+
+ </div>
+  <div class="w3-container w3-light-grey w3-padding" style="border-radius:10px;" >
+   <button style="border-radius:6px;" class="w3-button w3-right w3-white w3-border" 
+   onclick="document.getElementById('id01').style.display='none'">Close</button>
+  </div>
+ </div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+document.getElementsByClassName("tablink")[0].click();
+
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}
+</script>
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+            
+</body>
+</html
