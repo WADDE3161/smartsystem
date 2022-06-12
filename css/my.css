@@ -269,6 +269,12 @@
  #wind3 a {
   border-radius: 50%;
 }
+   #wind4 {
+          position: fixed;
+          bottom:85%;
+          left:75%;
+          border-radius: 50%;
+   }
 @media screen and (max-width: 650px) {
 .cardb {
             float: left;
