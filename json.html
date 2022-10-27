@@ -72,13 +72,13 @@
                          htmlString = htmlString + "<a href='" + "#" + value.districts[i] + "'>" + value.districts[i] + "</a>";
                          }
                          
-
+                          $("#table").html(htmlString);
                             //CONSTRUCTION OF ROWS HAVING
                             // DATA FROM JSON OBJECT
                             });
                           
                         //INSERTING ROWS INTO TABLE 
-                        $("#table").html(htmlString);
+                        
                     });
                 });
             </script>
