@@ -197,7 +197,7 @@ html {
 
 }
 #statedist {
-        float: right;
+        float: left;
     }
     
     #inputState {
@@ -290,9 +290,9 @@ html {
                         <option value="Pondicherry">Pondicherry</option>
                       </select>
 
-        <h3 style="text-align: center;font-size: 20px;">°°° Districts °°°</h3>
+        <h3 style="text-align: left;font-size: 20px;">°°° Districts °°°</h3>
         <div id="inputDistrict"> </div>
-        <div id="countdown"></div>
+        
     </div>
 
 
@@ -308,7 +308,7 @@ html {
 
 </header>
 <section>
-<h1 style="color: orange; text-align: center;"> ---- INDIA ---- </h1>
+<h1 style="color: orange; text-align: left;"> ---- INDIA ---- </h1>
            
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
@@ -574,17 +574,7 @@ function ifs() {
             $("#inputDistrict").html(htmlString);
         });
 </script>
-<script>
-var timeleft = 10;
-var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
-    clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Finished";
-  } else {
-    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-  }
-  timeleft -= 1;
-}, 1000);
+
 </script>
 </body>
 </html> 
