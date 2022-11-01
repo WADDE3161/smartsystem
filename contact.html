@@ -11,9 +11,9 @@
 
 </script>
           <script>
- function clik(){
-       var audio = new Audio('clk.wav');
-       audio.play();
+ function play() {
+        var audio = document.getElementById("aud");
+        audio.play();
       }
 </script>
           <script>
@@ -327,6 +327,9 @@ html {
               
          </div>
 </div> 
+
+    <input type="button" value="PLAY" onclick="play()">
+    <audio id="aud" src="clk.wav"></audio>
   <div class="row">         
    <div class="column" id="ceo">
       <div class="card">
