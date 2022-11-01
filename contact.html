@@ -559,8 +559,7 @@ function ifs() {
                     break;
             }
             for (var i = 0; i < optionsList.length; i++) {
-                 htmlString = htmlString + "<audio src='clk.wav' id ='" + optionsList[i] + "'>"
-                htmlString = htmlString + "<a onclick='" + optionsList[i] + "'>" + optionsList[i] + "</a>";
+                 htmlString = htmlString + "<a onclick='clik()'>" + optionsList[i] + "</a>";
             }
             $("#inputDistrict").html(htmlString);
         });
