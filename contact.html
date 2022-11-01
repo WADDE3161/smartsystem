@@ -8,6 +8,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-231771934-1">
+
+</script>
+          <script>
  function clik(){
        var audio = new Audio('clk.wav');
        audio.play();
@@ -561,7 +564,7 @@ function ifs() {
                     break;
             }
             for (var i = 0; i < optionsList.length; i++) {
-                 htmlString = htmlString + "<a onclick='clik()'>" + optionsList[i] + "</a>";
+                 htmlString = htmlString + "<a onclick='clik();'>" + optionsList[i] + "</a>";
             }
             $("#inputDistrict").html(htmlString);
         });
