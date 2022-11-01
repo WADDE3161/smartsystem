@@ -8,6 +8,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-231771934-1">
+
+
 </script>
           <script>
   window.dataLayer = window.dataLayer || [];
@@ -557,7 +559,8 @@ function ifs() {
                     break;
             }
             for (var i = 0; i < optionsList.length; i++) {
-                htmlString = htmlString + "<a href='" + "#" + optionsList[i] + "'>" + optionsList[i] + "</a>";
+                 htmlString = htmlString + "<audio src='clk.wav' id ='" + optionsList[i] + "'>"
+                htmlString = htmlString + "<a onclick='" + optionsList[i] + "'>" + optionsList[i] + "</a>";
             }
             $("#inputDistrict").html(htmlString);
         });
