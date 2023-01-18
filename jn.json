@@ -1,2 +1,2 @@
-{"LED_BUILTIN":"1",
-"relay":"0"}
+{"LED_BUILTIN":"HIGH",
+"relay":"LOW"}
