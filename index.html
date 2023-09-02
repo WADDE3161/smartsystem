@@ -52,15 +52,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href="#" class="w3-bar-item w3-button">remote</a>
     <a href="#" class="w3-bar-item w3-button">wireless switch</a>
     <a href="#" class="w3-bar-item w3-button">Mesh</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">switch boards<i class="fa fa-caret-down"></i>
+    <a onclick="myAccFunc()" href="javascript:void(-1)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">switch boards  <i class="fa fa-caret-down"></i>
     </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey">
-        <i class="fa fa-caret-right w3-margin-right"></i>Two Switch</a>
-      <a href="emp.html" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"></i>Four Switch</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"></i> Six Switch</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"></i>Fan Regulator</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"></i>Custam</a>
+    <div id="demoAcc" class="w3-bar-block w3-show w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i> Two Switch</a>
+      <a href="emp.html" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Four Switch</a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i> Six Switch</a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Fan Regulator</a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Custam</a>
     </div>
     <a href="#" class="w3-bar-item w3-button"></a>
     <a href="#" class="w3-bar-item w3-button">Learn</a>
@@ -245,10 +244,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 // Accordion 
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
+  if (x.className.indexOf("w3-hide") == -1) {
+    x.className += " w3-hide";
   } else {
-    x.className = x.className.replace(" w3-show", "");
+    x.className = x.className.replace(" w3-hide", "");
   }
 }
 
