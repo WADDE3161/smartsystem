@@ -121,6 +121,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
   <div class="w3-container w3-text-grey" id="jeans">
     <p>Contact</p>
+    <div class="mypanel"></div>
   </div>
 
   <!-- Subscribe section -->
@@ -181,9 +182,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
     
-    <div class="w3-container">
+    <div class="w3-panel w3-card-4">
       <span onclick="document.getElementById('id01').style.display='none'"class="w3-button w3-display-topright">&times;</span>
+      
       <p>Some text in the Modal..</p>
+
+      <p>w3-card-4</p>
     </div>
 
   </div>
@@ -200,7 +204,17 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
   </div>
 </div>
+<script>
+  $.getJSON('http://ssdfu.com/js.json', function(data) {
 
+      var text = `Date: ${data.date}<br>
+                  Time: ${data.time}<br>
+                  Unix time: ${data.milliseconds_since_epoch}`
+
+
+      $(".mypanel").html(text);
+  });
+  </script>
 <script>
 // Accordion 
 function myFunction() {
