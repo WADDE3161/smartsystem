@@ -52,15 +52,17 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href="#" class="w3-bar-item w3-button">remote</a>
     <a href="#" class="w3-bar-item w3-button">wireless switch</a>
     <a href="#" class="w3-bar-item w3-button">Mesh</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">switch boards  <i class="fa fa-caret-down"></i>
-    </a>
-    <div id="demoAcc" class="w3-bar-block w3-show w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i> Two Switch</a>
-      <a href="emp.html" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Four Switch</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i> Six Switch</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Fan Regulator</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Custam</a>
+    <div class="w3-dropdown-click">
+      <button onclick="myFunction()" class="w3-button w3-black">Switch Boards !</button>
+      <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Two Switch</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i> Four Switch</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i> Six Switch</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i> Fan Regulator</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Custam</a>
+      </div>
     </div>
+   
     <a href="#" class="w3-bar-item w3-button">Work with</a>
     <a href="#" class="w3-bar-item w3-button">Learn</a>
   </div>
@@ -242,14 +244,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <script>
 // Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-hide") == 0) {
-    x.className += " w3-hide";
-  } else {
-    x.className = x.className.replace(" w3-hide", "");
+function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) { 
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
   }
-}
 
 // Click on the "Jeans" link on page load to open the accordion for demo purposes
 document.getElementById("myBtn").click();
