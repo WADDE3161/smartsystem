@@ -116,6 +116,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW &#x20B9;</a></p>
     </div>
   </div>
+  <div id="google_translate_element"></div>
    <!-- Image header -->
    <div class="w3-display-container w3-container">
     <img src="img/hdui.png" alt="Jeans" style="width:100%">
@@ -205,7 +206,25 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
   </div>
 </div>
-<script>
+
+  
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',  // The primary language of your website
+        includedLanguages: 'hi,bn,ta',  // Indian languages you want to offer
+        autoDisplay: false,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        gaTrack: true,
+        gaId: 'YOUR_GA_TRACKING_ID', // Optional: Google Analytics tracking ID
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
   $.getJSON('/js.json', function(data) {
 
       var text = `Date: ${data.date}<br>
