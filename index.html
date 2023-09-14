@@ -67,7 +67,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button"><i class="fa fa-caret-right w3-margin-right"> </i>Custam</a>
       </div>
     </div>
-    <a href="#" class="w3-bar-item w3-button">Technology</a>
+    <a onclick="document.getElementById('tech').style.display='block'" class="w3-bar-item w3-button">Technology</a>
     <a href="dashboard.html" class="w3-bar-item w3-button"><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</a>
     <a href="emp.html" class="w3-bar-item w3-button"><i class="fa fa-eraser" aria-hidden="true"></i> Ir Remote</a>
     <a href="product.html" class="w3-bar-item w3-button"><i class="fa fa-window-maximize" aria-hidden="true"></i> Wireless Switch</a>
@@ -182,17 +182,25 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <!-- The Modal  tap bottom left right opacity-->
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    
     <div class="w3-panel w3-card-4">
       <span onclick="document.getElementById('id01').style.display='none'"class="w3-button w3-display-topright">&times;</span>
-      
       <p>Some text in the Modal..</p>
-
       <p>w3-card-4</p>
     </div>
 
   </div>
 </div>
+<div id="tech" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-panel w3-card-4">
+      <span onclick="document.getElementById('tech').style.display='none'"class="w3-button w3-display-topright">&times;</span>
+      <p>how dose it works </p>
+      <p>w3-card-4</p>
+    </div>
+
+  </div>
+</div>
+
 <!-- Newsletter Modal -->
 <div id="newsletter" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
