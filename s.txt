@@ -9,7 +9,7 @@ control all electric  Appliance like on And off tv,fan,light.
 seeting at one place,cantrol all node devices.
 
 
-we control all the node devices using 
+we control all the node dev 
 mobile device
 tablet
 laptop
