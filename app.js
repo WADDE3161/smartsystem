@@ -12,27 +12,7 @@ function speak(text){
     window.speechSynthesis.speak(text_speak);
 }
 
-
-const requestPermissionBtn = document.getElementById('requestPermissionBtn');
-
-requestPermissionBtn.addEventListener('click', async () => {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        // Microphone access granted
-        console.log('Microphone access granted');
-        // Here you can proceed with your speech recognition or audio processing logic
-    } catch (error) {
-        // Microphone access denied or error occurred
-        console.error('Error accessing microphone:', error);
-        // You can provide a message to the user or handle the error gracefully
-        alert('Microphone access denied or an error occurred. Please check your browser settings and try again.');
-    }
-});
-
-
-
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
 const recognition =  new SpeechRecognition();
 let listening = false; // Variable to track if recognition is currently active
 const weakWord = 'ruhi'; // Your weak word
