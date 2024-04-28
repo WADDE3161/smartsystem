@@ -147,19 +147,14 @@ button:hover {
     var qr = qrcode(typeNumber, errorCorrectionLevel);
     qr.addData(data);
     qr.make();
-
+    
     // Calculate the size for a 720px image
     var size = Math.ceil(720 / qr.getModuleCount());
 
-    // Get the logo image
-    var logo = document.getElementById('logo');
-
-    // Merge the QR code with the logo image
-    qr.mergeImg(logo.src, size / 4, size / 4, size / 2, size / 2);
-
-    // Generate QR code image with specified size and logo
+    // Generate QR code image with specified size
+    qr.createImgTag(size);
     document.getElementById('qrcode').innerHTML = qr.createImgTag(size);
-}
+                        }
     </script>
 </body>
 </html>
