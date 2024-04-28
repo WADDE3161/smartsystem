@@ -40,7 +40,12 @@ input[type="text"], button {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
+input[type="date"], button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
 button {
     background-color: #007bff;
     color: #fff;
@@ -128,21 +133,27 @@ button:hover {
 
         // Function to generate QR code
         function generateQR() {
-            var name = document.getElementById('name').value;
-            var date = document.getElementById('date').value;
-            var id = document.getElementById('id').value;
+    var name = document.getElementById('name').value;
+    var date = document.getElementById('date').value;
+    var id = document.getElementById('id').value;
 
-            // Combine data into a single string
-            var data = name + ',' + date + ',' + id;
+    // Combine data into a single string
+    var data = name + ',' + date + ',' + id;
 
-            // Generate QR code
-            var typeNumber = 0;
-            var errorCorrectionLevel = 'L';
-            var qr = qrcode(typeNumber, errorCorrectionLevel);
-            qr.addData(data);
-            qr.make();
-            document.getElementById('qrcode').innerHTML = qr.createImgTag();
-        }
+    // Generate QR code with higher quality and size
+    var typeNumber = 10; // Higher typeNumber for better quality
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData(data);
+    qr.make();
+    
+    // Calculate the size for a 720px image
+    var size = Math.ceil(720 / qr.getModuleCount());
+
+    // Generate QR code image with specified size
+    qr.createImgTag(size);
+    document.getElementById('qrcode').innerHTML = qr.createImgTag(size);
+}
     </script>
 </body>
 </html>
