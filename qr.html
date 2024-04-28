@@ -26,8 +26,8 @@ h1 {
 }
 
 #scanner {
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    height: 700px;
     margin: 20px;
     border: 2px solid #333;
     border-radius: 5px;
@@ -78,6 +78,7 @@ button:hover {
     <button onclick="startScanner()">Scan QR Code</button>
 
     <h1>QR Code Generator</h1>
+    <img id="logo" src="logo.png" alt="Logo" style="display: none;">
     <input type="text" id="name" placeholder="Name"><br>
     <input type="date" id="date" placeholder="Date"><br>
     <input type="text" id="id" placeholder="ID"><br>
@@ -146,12 +147,17 @@ button:hover {
     var qr = qrcode(typeNumber, errorCorrectionLevel);
     qr.addData(data);
     qr.make();
-    
+
     // Calculate the size for a 720px image
     var size = Math.ceil(720 / qr.getModuleCount());
 
-    // Generate QR code image with specified size
-    qr.createImgTag(size);
+    // Get the logo image
+    var logo = document.getElementById('logo');
+
+    // Merge the QR code with the logo image
+    qr.mergeImg(logo.src, size / 4, size / 4, size / 2, size / 2);
+
+    // Generate QR code image with specified size and logo
     document.getElementById('qrcode').innerHTML = qr.createImgTag(size);
 }
     </script>
