@@ -13,7 +13,7 @@
 }
 
 .container {
-    max-width: 60%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -78,10 +78,10 @@ button:hover {
     <button onclick="startScanner()">Scan QR Code</button>
 
     <h1>QR Code Generator</h1>
-    <img id="logo" src="images/Logos.png" alt="Logo" style="display: none;">
-    <input type="text" id="name" placeholder="Name"><br>
+    
+    <input type="text" id="name" placeholder="Name">
     <input type="date" id="date" placeholder="Date"><br>
-    <input type="text" id="id" placeholder="ID"><br>
+    <input type="text" id="id" placeholder="ID">
     <button onclick="generateQR()">Generate QR Code</button>
     <div id="qrcode"></div>
 
