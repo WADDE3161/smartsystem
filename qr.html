@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>QR Code Scanner and Generator</title>
-    <script src="https://cdn.jsdelivr.net/npm/instascan@1.0.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
 </head>
 <body>
     <h1>QR Code Scanner</h1>
     <div id="scanner"></div>
     <div id="display"></div>
+    <button onclick="startScanner()">Scan QR Code</button>
 
     <h1>QR Code Generator</h1>
     <input type="text" id="name" placeholder="Name">
@@ -29,26 +30,40 @@
             document.cookie = name + "=" + (value || "") + expires + "; path=/";
         }
 
-        // QR scanner setup
-        let scanner = new Instascan.Scanner({ video: document.getElementById('scanner') });
-        scanner.addListener('scan', function(content) {
-            let [name, date, id] = content.split(',');
-            setCookie('name', name.trim(), 1); // Save name in cookie for 1 day
-            setCookie('date', date.trim(), 1); // Save date in cookie for 1 day
-            setCookie('id', id.trim(), 1); // Save ID in cookie for 1 day
-            document.getElementById('display').innerHTML = `Name: ${name}<br>Date: ${date}<br>ID: ${id}`;
-        });
+        // Function to start the QR scanner
+        function startScanner() {
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: document.querySelector('#scanner'),
+                    constraints: {
+                        width: 640,
+                        height: 480,
+                        facingMode: "environment"
+                    },
+                },
+                decoder: {
+                    readers: ["code_128_reader"]
+                }
+            }, function (err) {
+                if (err) {
+                    console.error(err);
+                    return;
+                }
+                console.log("Initialization finished. Ready to start");
+                Quagga.start();
+            });
 
-        // Start scanning
-        Instascan.Camera.getCameras().then(function(cameras) {
-            if (cameras.length > 0) {
-                scanner.start(cameras[0]);
-            } else {
-                console.error('No cameras found.');
-            }
-        }).catch(function(e) {
-            console.error(e);
-        });
+            Quagga.onDetected(function(result) {
+                let [name, date, id] = result.codeResult.code.split(',');
+                setCookie('name', name.trim(), 1); // Save name in cookie for 1 day
+                setCookie('date', date.trim(), 1); // Save date in cookie for 1 day
+                setCookie('id', id.trim(), 1); // Save ID in cookie for 1 day
+                document.getElementById('display').innerHTML = `Name: ${name}<br>Date: ${date}<br>ID: ${id}`;
+                Quagga.stop();
+            });
+        }
 
         // Function to generate QR code
         function generateQR() {
@@ -60,10 +75,12 @@
             var data = name + ',' + date + ',' + id;
 
             // Generate QR code
-            var qr = new QRious({
-                element: document.getElementById('qrcode'),
-                value: data
-            });
+            var typeNumber = 0;
+            var errorCorrectionLevel = 'L';
+            var qr = qrcode(typeNumber, errorCorrectionLevel);
+            qr.addData(data);
+            qr.make();
+            document.getElementById('qrcode').innerHTML = qr.createImgTag();
         }
     </script>
 </body>
