@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Scanner and Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+#scanner {
+    width: 80%;
+    height: 400px;
+    margin: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="date"], button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#qrcode {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    
+}
+
+#display {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+    <h1>QR Code Scanner</h1>
+    <div id="scanner"></div>
+    <div id="display"></div>
+    <button onclick="startScanner()">Scan QR Code</button>
+
+    <h1>QR Code Generator</h1>
+    <input type="text" id="name" placeholder="Name"><br>
+    <input type="date" id="date" placeholder="Date"><br>
+    <input type="text" id="id" placeholder="ID"><br>
+    <button onclick="generateQR()">Generate QR Code</button>
+    <div id="qrcode"></div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to start the QR scanner
+        function startScanner() {
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: document.querySelector('#scanner'),
+                    constraints: {
+                        width: 640,
+                        height: 480,
+                        facingMode: "environment"
+                    },
+                },
+                decoder: {
+                    readers: ["code_128_reader"]
+                }
+            }, function (err) {
+                if (err) {
+                    console.error(err);
+                    return;
+                }
+                console.log("Initialization finished. Ready to start");
+                Quagga.start();
+            });
+
+            Quagga.onDetected(function(result) {
+                let [name, date, id] = result.codeResult.code.split(',');
+                setCookie('name', name.trim(), 1); // Save name in cookie for 1 day
+                setCookie('date', date.trim(), 1); // Save date in cookie for 1 day
+                setCookie('id', id.trim(), 1); // Save ID in cookie for 1 day
+                document.getElementById('display').innerHTML = `Name: ${name}<br>Date: ${date}<br>ID: ${id}`;
+                Quagga.stop();
+            });
+        }
+
+        // Function to generate QR code
+        function generateQR() {
+    var name = document.getElementById('name').value;
+    var date = document.getElementById('date').value;
+    var id = document.getElementById('id').value;
+
+    // Combine data into a single string
+    var data = name + ',' + date + ',' + id;
+
+    // Generate QR code with higher quality and size
+    var typeNumber = 10; // Higher typeNumber for better quality
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData(data);
+    qr.make();
+    
+    // Calculate the size for a 720px image
+    var size = Math.ceil(720 / qr.getModuleCount());
+
+    // Generate QR code image with specified size
+    qr.createImgTag(size);
+    document.getElementById('qrcode').innerHTML = qr.createImgTag(size);
+}
+    </script>
+</body>
+</html>
